@@ -4,8 +4,8 @@
     "module": "CommonJS",
     "moduleResolution": "node",
     "lib": ["ES2022"],
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "outDir": "../../dist/server",
+    "rootDir": "../..",
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -20,6 +20,6 @@
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true
   },
-  "include": ["src/shared/**/*"],
-  "exclude": ["node_modules", "dist", "src/server", "src/client"]
+  "include": ["**/*", "../shared/**/*"],
+  "exclude": []
 }
