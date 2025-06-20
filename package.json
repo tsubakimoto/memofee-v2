@@ -1,0 +1,19 @@
+{
+  "name": "memofee-v2",
+  "version": "1.0.0",
+  "description": "RSS feed memo web application",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "serve": "python3 -m http.server 8000",
+    "start": "npm run build && npm run serve"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "keywords": ["rss", "feed", "memo", "typescript"],
+  "author": "Yuta Matsumura",
+  "license": "MIT"
+}

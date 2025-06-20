@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoFee - RSS フィードメモアプリ</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>MemoFee</h1>
+            <div class="rss-registration">
+                <input 
+                    type="url" 
+                    id="rss-url-input" 
+                    placeholder="RSS フィード URL を入力してください"
+                    class="rss-input"
+                />
+                <button id="add-rss-btn" class="btn btn-primary">RSS 追加</button>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <!-- 左ペイン: フィードリスト (60%) -->
+            <div class="feed-panel">
+                <h2>フィード一覧</h2>
+                <div id="feed-list" class="feed-list">
+                    <div class="no-feeds">
+                        RSS フィードが登録されていません。<br>
+                        上部の入力欄から RSS URL を登録してください。
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右ペイン: メモエリア (40%) -->
+            <div class="memo-panel">
+                <h2>メモ</h2>
+                <div class="memo-content">
+                    <div id="selected-item-info" class="selected-item-info">
+                        フィードアイテムを選択してください
+                    </div>
+                    <textarea 
+                        id="memo-textarea" 
+                        class="memo-textarea" 
+                        placeholder="ここにメモを入力してください..."
+                        disabled
+                    ></textarea>
+                    <div class="memo-actions">
+                        <button id="save-memo-btn" class="btn btn-success" disabled>保存</button>
+                        <button id="clear-memo-btn" class="btn btn-secondary" disabled>クリア</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="dist/main.js"></script>
+</body>
+</html>
